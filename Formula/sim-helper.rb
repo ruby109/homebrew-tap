@@ -1,8 +1,8 @@
 class SimHelper < Formula
   desc "Per-worktree iOS simulators and a shared Xcode compilation cache"
   homepage "https://github.com/ruby109/sim-helper"
-  url "https://github.com/ruby109/sim-helper/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "f64dda4b29d7fa8c933f307005a1fa1894f2b8cc9341021aaf1fb0e4d7e3abb8"
+  url "https://github.com/ruby109/sim-helper/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "560dba1dfdc3fad35b395051bd39f5629df3d90afbe1dc131866a119d40709b7"
   license "MIT"
 
   depends_on :macos
