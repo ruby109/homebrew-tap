@@ -17,9 +17,12 @@ class SimHelper < Formula
 
   def caveats
     <<~EOS
-      To give Claude Code the sim-helper skill:
-        mkdir -p ~/.claude/skills
-        ln -s #{opt_pkgshare}/skills/sim-helper ~/.claude/skills/sim-helper
+      To teach agents to use sim-helper, link its skill:
+        Claude Code: mkdir -p ~/.claude/skills && ln -s #{opt_pkgshare}/skills/sim-helper ~/.claude/skills/sim-helper
+        Codex:       mkdir -p ~/.agents/skills && ln -s #{opt_pkgshare}/skills/sim-helper ~/.agents/skills/sim-helper
+      Claude Code can also install it as a plugin:
+        /plugin marketplace add ruby109/sim-helper
+        /plugin install sim-helper@sim-helper
     EOS
   end
 
