@@ -1,8 +1,8 @@
 class SimHelper < Formula
   desc "Per-worktree iOS simulators and a shared Xcode compilation cache"
   homepage "https://github.com/ruby109/sim-helper"
-  url "https://github.com/ruby109/sim-helper/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "560dba1dfdc3fad35b395051bd39f5629df3d90afbe1dc131866a119d40709b7"
+  url "https://github.com/ruby109/sim-helper/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "24bcc9e86af457b372c16121d3781e57da5147b04b2ac7dd7eed11262c6a1736"
   license "MIT"
 
   depends_on :macos
@@ -17,12 +17,8 @@ class SimHelper < Formula
 
   def caveats
     <<~EOS
-      To teach agents to use sim-helper, link its skill:
-        Claude Code: mkdir -p ~/.claude/skills && ln -s #{opt_pkgshare}/skills/sim-helper ~/.claude/skills/sim-helper
-        Codex:       mkdir -p ~/.agents/skills && ln -s #{opt_pkgshare}/skills/sim-helper ~/.agents/skills/sim-helper
-      Claude Code can also install it as a plugin:
-        /plugin marketplace add ruby109/sim-helper
-        /plugin install sim-helper@sim-helper
+      To teach Claude Code and Codex to use sim-helper:
+        sim-helper skill install
     EOS
   end
 
